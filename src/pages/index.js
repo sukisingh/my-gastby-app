@@ -9,7 +9,7 @@ const IndexPage = () => (
     <div>
       <div className="Hero">
         <div className="HeroGroup">
-          <h1>Power to create anything</h1>
+          <h1>Power to <br/>create anything</h1>
           <p>We are global branding agency helping companies to communicate through vision and imagination</p> 
           <Link to="/page-2/">Watch the video</Link>
         </div>
