@@ -6,6 +6,30 @@ import Image from '../components/image'
 import Card from '../components/Card';
 import Section from '../components/Section';
 import Wave from '../components/Wave';
+import staticdata from '../../staticdata.json'
+import Cell from '../components/Cell';
+import styled from 'styled-components'
+
+const SectionCaption = styled.p `
+  font-size:28px;
+  font-weight:600;
+  text-transform:uppercase;
+  color: #0045AD;
+  text-align:center;
+`
+
+const SectionCellGroup = styled.div `
+  max-width:800px;
+  margin:0 auto 100px;
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-colum-gap: 20px;
+  padding: 0 20px;
+
+  @media (max-width:800px){
+    grid-template-columns:repeat(1,1fr);
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -53,6 +77,16 @@ const IndexPage = () => (
         title="Nullam Id Feugiat"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim et ipsum ut congue. Nam et neque nec turpis interdum pellentesque a id nisi. Nam interdum non tellus et efficitur.  "
       />
+      
+       <SectionCaption>Lorem ipsum dolor sit amet
+       </SectionCaption>
+       <SectionCellGroup>
+            {staticdata.cells.map(cell => (
+            <Cell 
+            title={cell.title}
+            image={cell.image} />
+            ))}
+       </SectionCellGroup>
     </div>
       </Layout>
 )
