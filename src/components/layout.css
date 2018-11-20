@@ -103,6 +103,7 @@ a{
   font-weight:700;
   text-align:center;
   background: linear-gradient(104deg,#050A27 0%,#4A548C 100%);
+  background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
